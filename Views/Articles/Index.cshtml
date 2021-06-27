@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Atelier_Pratique_9.Models.Article>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Designation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Type.NomType)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Designation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Type.NomType)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.RefArticle }) |
+            @Html.ActionLink("Details", "Details", new { id=item.RefArticle }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.RefArticle })
+        </td>
+    </tr>
+}
+
+</table>

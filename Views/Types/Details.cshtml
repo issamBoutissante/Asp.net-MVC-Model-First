@@ -1,0 +1,26 @@
+﻿@model Atelier_Pratique_9.Models.Type
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Type</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomType)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Modifier", "Edit", new { id = Model.NumType }) |
+    @Html.ActionLink("Retour a la liste", "Index")
+</p>

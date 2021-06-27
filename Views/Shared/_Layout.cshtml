@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+    <style>
+        nav{
+            padding:20px;
+            background-color:deepskyblue;
+            margin-bottom:20px;
+        }
+        body{
+            padding:0;
+        }
+        nav a{
+            color:white;
+            font-size:20px;
+            padding-right:10px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="~/Types">Liste Types</a>
+        <a href="~/Articles">Liste Articles</a>
+    </nav>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+    </div>
+
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
